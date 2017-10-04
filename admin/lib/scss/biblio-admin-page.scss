@@ -1,0 +1,87 @@
+.biblio-admin-page {
+	h1 {
+		margin-bottom: 50px;
+	}
+
+	#biblio-search {
+		width: 300px;
+		height: 35px;
+		background: #ffffff;
+		border: 1px solid #d7d7d7;
+		font-size: 14px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+		border-radius: 2px;
+		padding: 5px 15px;
+		margin-bottom: 30px;
+	}
+
+
+	table.biblio-entries-table {
+		background: white;
+		width: 100%;
+		border: 1px solid #d9d9d9;
+
+		thead {
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+
+			th {
+				text-align: left;
+				padding: 10px 15px;
+			}
+		}
+
+		tr {
+
+			&.odd td { background: #fcfcfc; }
+
+			td {
+				padding: 10px 15px;	
+			}
+		}
+
+		.references-count { text-decoration: underline; cursor: pointer; color: $green; }
+
+		.biblio-references-list {
+			display: none;
+
+			&.active { display: table-row; }
+
+			td {
+				background: #fcfcfc;
+			}
+
+			.biblio-title { display: none; }
+
+			.biblio-reference {
+
+				.reference-parent {
+					padding-left: 15px;
+
+					span {
+						font-weight: bold;
+					}
+				}
+
+				.reference-text {
+					cursor: pointer;
+					&:hover {
+						color: $green;
+						text-decoration: underline;
+					}
+				}
+
+				.reference-text, .reference-parent {
+					display: inline-block;
+				}
+				p {
+					font-size: 14px;
+					margin: 0;
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+	}
+
+
+}

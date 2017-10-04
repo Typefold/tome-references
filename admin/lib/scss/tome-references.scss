@@ -1,0 +1,167 @@
+// Noto Sans
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic);
+$noto: 'Noto Sans', sans-serif;
+$green: #39b27d;
+
+@import 'modal-window';
+@import 'biblio-form';
+@import 'biblio-entry-list';
+@import 'biblio-admin-page';
+@import 'datepicker';
+
+
+#references-modal {
+	.back-button {
+		position: fixed;
+		left: -20px;
+		bottom: -20px;
+		background: #f7f7f7 url('../lib/images/back_arrow.png') no-repeat center center;
+		display: block;
+		padding: 25px 25px;
+		text-decoration: none;
+		border: 1px solid #e8e8e8;
+		font-size: 14px;
+		background-size: 20px;
+		transition: all ease-in 250ms;
+
+		&:hover {
+			background-color: #e8e8e8;
+		}
+	}
+
+	.no-biblio-entries {
+		text-align: center;
+		font-size: 24px;
+		color: #b1b1b1;
+		font-weight: 400;
+		font-style: italic;
+		font-family: 'Lora';
+		letter-spacing: 1px;
+		margin-top: 60px;
+	}
+
+	.first-biblio {
+		width: 130px;
+		height: 45px;
+		text-align: center;
+		line-height: 45px;
+		font-size: 13px;
+		border: 1px solid #339e70;
+		box-shadow: #b3b3b3 0 0 6px;
+		margin: 0 auto;
+		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin-top: 70px;
+	}
+}
+
+
+
+#wp-reference_text-wrap {
+	margin-bottom: 20px;
+}
+
+
+.tome-popup-bg {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.1);
+	z-index: 999999;
+	transform: scale(1);
+}
+.tome-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999999;
+    background: white;
+    padding-top: 15px;
+    width: 320px;
+    text-align: center;
+    margin-left: -160px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0 0 20px;
+    margin-top: -30px;
+
+    p {
+	    margin: 0;
+	    padding: 0 20px;
+	    margin-bottom: 10px;
+	    font-size: 14px;
+	    color: grey;
+	    letter-spacing: 1px;
+    }
+
+    .choices-wrapper {
+    	display: flex;
+    	margin-top: 15px;
+
+    	.popup-choice {
+    		display: block;
+    		text-align: center;
+    		background: #39b27d;
+    		color: white;
+    		padding: 10px 0;
+    		text-transform: uppercase;
+    		letter-spacing: 1px;
+    		cursor: pointer;
+    		transition: background ease 250ms;
+    		transform: scale(1);
+    		flex-grow: 1;
+
+    		&:hover {
+    			background: darken(#39b37d, 5%);
+    		}
+
+    		&.red {
+    			background: #b23939;
+    			&:hover {
+    				background: darken(#b23939, 5%);
+    			}
+    		}
+
+    	}
+
+    }
+   
+
+    &.delete-biblio-popup {
+    	width: 400px;
+    }
+}
+
+
+.short-placeholder {
+    border: 1px dashed #ccc;
+    display: block;
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.short-placeholder.tome-reference {
+    width: initial;
+    border: 0;
+    border-bottom: dotted 1px #ccc;
+    height: initial;
+    color: #333;
+    display: initial;
+}
+
+
+/*===========================================
+=            dashboard-nav--icon            =
+===========================================*/
+.bilbio-entries-nav-icon {
+	display: inline-block;
+	width: 18px;
+	height: 23px;
+	background: url('reference.png');					
+	background-size: 100%;
+	opacity: 0.55;
+}

@@ -1,0 +1,133 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ @import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700&subset=latin-ext);
+
+ .bibliography-list .biblio-entry {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	overflow-wrap: break-word;
+}
+
+.tome-tooltip .reference-popup-content { display: none; }
+
+.tooltipster-base {
+	max-width: 800px;
+}
+
+.tooltipster-base .tooltipster-box {
+	border: 0;
+	background: #fbfbfb;
+	border: 1px solid #d9d9d9;
+}
+
+.tooltipster-sidetip .tooltipster-content,
+.tooltipster-sidetip .tooltipster-content p {
+	margin-bottom: 5px;
+	font-size: 16px;
+	color: #333;
+}
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow {
+	bottom: -1px;
+	height: 13px;
+}
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border { border-top-color: #d9d9d9; }
+
+.tooltipster-sidetip .tooltipster-arrow-border {
+	border: 10px solid transparent;
+	left: 0;
+	top: 3px;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+	border-top-color: #fbfbfb;
+	left: 0;
+	top: 2px;
+}
+
+.tooltipster-sidetip .tooltipster-content .view-biblio {
+	color: #1e8868;
+	display: inline-block;
+	margin-left: 10px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.tooltipster-sidetip .tooltipster-content .content-wrapp {
+	display: inline-block;
+}
+
+
+article p .tome-tooltip {
+	margin-bottom: 0;
+	font-size: 1em;
+	line-height: 1;
+	display: initial;
+}
+
+.tome-tooltip {
+	margin-bottom: 2em;
+	font-size: 1.365em;
+	display: block;
+	line-height: 1.6;
+}
+
+p .tome-tooltip { margin-left: 5px; }
+
+blockquote .tome-tooltip {
+	font-size: 22px;
+	font-family: 'Lora', arial, serif;
+	font-style: italic;
+	line-height: 35px;
+	margin-bottom: 20px;
+}
+
+
+.tome-tooltip {
+	border-bottom: dotted 1px #ccc;
+	cursor: pointer;
+}
+
+.tome-tooltip:hover, .tome-tooltip:focus {
+	border-bottom: dotted 1px #1d777c;
+	color: #25a37d;
+}
+
+.biblio-entry {
+	margin-bottom: 2em;
+	display: block;
+}
+
+.biblio-entry p {
+	margin-bottom: 0;
+}
+
+.biblio-entry, .biblio-entry p {
+	font-family: "Lora", "Consolas", "Menlo", "Courier", monospace;
+	font-size: 16px;
+	color: #939393;
+}
+
+.works-cited { border-top: 1px solid #dfdfdf; padding-top: 30px; }
+.works-cited.bibliography { border-top: 0; }
+
+.works-cited .works-cited-title { color: black; margin-bottom: 25px; }
+
+@keyframes blink-highlight {
+	to { background-color: #ff7}
+	from { background-color: inherit }
+}
+
+.works-cited .biblio-entry.active {
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	animation-name: blink-highlight;
+	animation-delay: .3s;
+	animation-iteration-count: 4;
+	animation-direction: alternate;
+
+}
